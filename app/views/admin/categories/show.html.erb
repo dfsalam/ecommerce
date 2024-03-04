@@ -1,3 +1,6 @@
+<%= link_to admin_categories_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700 w-32" do %>
+  <%= icon('fa-solid', 'backward', class:'mr-2') %><span class="hidden md:inline-block">Back</span>
+<% end %>
 <div class="mx-auto md:w-2/3 w-full flex">
   <div class="mx-auto">
     <% if notice.present? %>
@@ -7,9 +10,9 @@
     <%= render @admin_category %>
 
     <%= link_to "Edit this admin_category", edit_admin_category_path(@admin_category), class: "mt-2 rounded-lg py-3 px-5 bg-green-600 text-white inline-block font-medium" %>
-    <div class="inline-block ml-2">
+    <div class="inline-block">
       <%= button_to "Destroy this admin_category", admin_category_path(@admin_category), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-red-600 text-white font-medium" %>
     </div>
-    <%= link_to "Back to admin_categories", admin_categories_path, class: "ml-2 rounded-lg py-3 px-5 bg-emerald-900 text-white inline-block font-medium" %>
+    
   </div>
 </div>

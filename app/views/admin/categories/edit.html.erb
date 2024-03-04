@@ -1,10 +1,8 @@
-<div class="mx-auto md:w-2/3 w-full">
+<%= link_to admin_categories_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700 w-32" do %>
+  <%= icon('fa-solid', 'backward', class:'mr-2') %><span class="hidden md:inline-block">Back</span>
+<% end %>
+<div class="mx-auto md:w-2/3 w-full">  
   <h1 class="font-bold text-4xl">Editing category</h1>
-
   <%= render "form", admin_category: @admin_category %>
-
-  <%= link_to "Show this category", [:admin, @admin_category], class: "ml-2 rounded-lg py-3 px-5 bg-emerald-800 text-white inline-block font-medium" %>
-  
-  <%= link_to "Back to categories", admin_categories_path, class: "ml-2 rounded-lg py-3 px-5 bg-orange-600 inline-block font-medium" %>
-  
+  <%= link_to "Show this category", [:admin, @admin_category], class: "ml-2 rounded-lg py-3 px-5 bg-emerald-800 text-white inline-block font-medium" %>  
 </div>
